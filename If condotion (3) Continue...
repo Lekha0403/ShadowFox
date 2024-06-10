@@ -1,0 +1,46 @@
+def check_same_country(city1, city2, city_country_map):
+    # Normalize city names to lowercase for case-insensitive comparison
+    city1 = city1.lower()
+    city2 = city2.lower()
+    
+    # Check if both cities are in the map
+    if city1 in city_country_map and city2 in city_country_map:
+        # Compare the countries of the two cities
+        if city_country_map[city1] == city_country_map[city2]:
+            return True
+        else:
+            return False
+    else:
+        return None
+
+def main():
+    # A sample dictionary containing some cities and their respective countries
+    city_country_map = {
+        'new york': 'usa',
+        'los angeles': 'usa',
+        'toronto': 'canada',
+        'vancouver': 'canada',
+        'london': 'uk',
+        'manchester': 'uk',
+        'paris': 'france',
+        'lyon': 'france',
+        'berlin': 'germany',
+        'munich': 'germany'
+    }
+    
+    # Ask the user to enter two cities
+    city1 = input("Enter the first city: ").strip()
+    city2 = input("Enter the second city: ").strip()
+    
+    # Check if they belong to the same country
+    result = check_same_country(city1, city2, city_country_map)
+    
+    if result is True:
+        print(f"{city1.title()} and {city2.title()} belong to the same country.")
+    elif result is False:
+        print(f"{city1.title()} and {city2.title()} do not belong to the same country.")
+    else:
+        print("One or both of the cities are not in the database.")
+
+if __name__ == "__main__":
+    main()
