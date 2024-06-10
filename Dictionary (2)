@@ -1,0 +1,46 @@
+# Your expenses dictionary
+your_expenses = {
+    "Hotel": 1200,
+    "Food": 800,
+    "Transportation": 500,
+    "Attractions": 300,
+    "Miscellaneous": 200
+}
+
+# Your partner's expenses dictionary
+partner_expenses = {
+    "Hotel": 1000,
+    "Food": 900,
+    "Transportation": 600,
+    "Attractions": 400,
+    "Miscellaneous": 150
+}
+
+# Calculate total expenses for each
+total_your_expenses = sum(your_expenses.values())
+total_partner_expenses = sum(partner_expenses.values())
+
+# Determine who spent more
+if total_your_expenses > total_partner_expenses:
+    bigger_spender = "You"
+    difference = total_your_expenses - total_partner_expenses
+elif total_partner_expenses > total_your_expenses:
+    bigger_spender = "Your partner"
+    difference = total_partner_expenses - total_your_expenses
+else:
+    bigger_spender = "Both spent the same amount"
+    difference = 0
+
+# Find the expense category with the most significant difference
+expense_difference = {}
+for category in your_expenses:
+    expense_difference[category] = abs(your_expenses[category] - partner_expenses[category])
+
+significant_difference_category = max(expense_difference, key=expense_difference.get)
+significant_difference_amount = expense_difference[significant_difference_category]
+
+# Print the results
+print(f"Total expenses for you: ${total_your_expenses}")
+print(f"Total expenses for your partner: ${total_partner_expenses}")
+print(f"{bigger_spender} spent more money overall by ${difference}")
+print(f"The category with the most significant difference in spending is '{significant_difference_category}' with a difference of ${significant_difference_amount}")
