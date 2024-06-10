@@ -1,0 +1,62 @@
+# Define the Avenger class
+class Avenger:
+    def __init__(self, name, alias, superpower, weapon):
+        self.name = name
+        self.alias = alias
+        self.superpower = superpower
+        self.weapon = weapon
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Alias: {self.alias}")
+        print(f"Superpower: {self.superpower}")
+        print(f"Weapon: {self.weapon}")
+        print("-" * 30)
+
+# List of superhero names
+super_heroes = ["Captain America", "Iron Man", "Black Widow", "Hulk", "Thor", "Hawkeye"]
+
+# Create dictionary with specific attributes for each superhero
+avengers_info = {
+    "Captain America": {
+        "alias": "Steve Rogers",
+        "superpower": "Enhanced strength, agility, and endurance",
+        "weapon": "Vibranium shield"
+    },
+    "Iron Man": {
+        "alias": "Tony Stark",
+        "superpower": "Genius-level intellect, powered armor suit",
+        "weapon": "Repulsor beams, missiles"
+    },
+    "Black Widow": {
+        "alias": "Natasha Romanoff",
+        "superpower": "Expert martial artist and spy",
+        "weapon": "Various weapons and gadgets"
+    },
+    "Hulk": {
+        "alias": "Bruce Banner",
+        "superpower": "Superhuman strength and durability",
+        "weapon": "His own strength"
+    },
+    "Thor": {
+        "alias": "Thor Odinson",
+        "superpower": "God of Thunder, superhuman strength",
+        "weapon": "Mjolnir (hammer)"
+    },
+    "Hawkeye": {
+        "alias": "Clint Barton",
+        "superpower": "Master archer and marksman",
+        "weapon": "Bow and trick arrows"
+    }
+}
+
+# Create instances of Avenger class
+avengers = []
+for hero in super_heroes:
+    info = avengers_info[hero]
+    avenger = Avenger(hero, info["alias"], info["superpower"], info["weapon"])
+    avengers.append(avenger)
+
+# Display information about each Avenger
+for avenger in avengers:
+    avenger.display_info()
