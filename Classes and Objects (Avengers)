@@ -1,0 +1,30 @@
+# Define the Avenger class
+class Avenger:
+    def __init__(self, name, alias, superpower, weapon):
+        self.name = name
+        self.alias = alias
+        self.superpower = superpower
+        self.weapon = weapon
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Alias: {self.alias}")
+        print(f"Superpower: {self.superpower}")
+        print(f"Weapon: {self.weapon}")
+        print("-" * 30)
+
+# Create six superheroes using the Avenger class
+iron_man = Avenger("Tony Stark", "Iron Man", "Genius-level intellect, powered armor suit", "Repulsor beams, missiles")
+captain_america = Avenger("Steve Rogers", "Captain America", "Enhanced strength, agility, and endurance", "Vibranium shield")
+thor = Avenger("Thor Odinson", "Thor", "God of Thunder, superhuman strength", "Mjolnir (hammer)")
+hulk = Avenger("Bruce Banner", "Hulk", "Superhuman strength and durability", "His own strength")
+black_widow = Avenger("Natasha Romanoff", "Black Widow", "Expert martial artist and spy", "Various weapons and gadgets")
+hawkeye = Avenger("Clint Barton", "Hawkeye", "Master archer and marksman", "Bow and trick arrows")
+
+# Display information about each Avenger
+iron_man.display_info()
+captain_america.display_info()
+thor.display_info()
+hulk.display_info()
+black_widow.display_info()
+hawkeye.display_info()
