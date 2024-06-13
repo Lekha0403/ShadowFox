@@ -1,0 +1,15 @@
+class Avenger:
+    def __init__(self, name, age, gender, super_power, weapon):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.super_power = super_power
+        self.weapon = weapon
+
+    def __repr__(self):
+        return (f"Avenger(Name: {self.name}, Age: {self.age}, Gender: {self.gender}, "
+                f"Super Power: {self.super_power}, Weapon: {self.weapon})")
+
+# Example of creating an Avenger instance
+avenger = Avenger(name="Thor", age=1500, gender="Male", super_power="God of Thunder", weapon="Mjolnir")
+print(avenger)
