@@ -1,0 +1,15 @@
+class Superhero:
+    LEADERS = {"Superman", "Wonder Woman", "Captain America"}
+
+    def __init__(self, name):
+        self.name = name
+    
+    def is_leader(self):
+        return self.name in self.LEADERS
+
+# Example usage:
+hero1 = Superhero("Superman")
+hero2 = Superhero("Flash")
+
+print(hero1.is_leader())  
+print(hero2.is_leader()) 
