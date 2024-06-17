@@ -1,0 +1,12 @@
+Create a variable named pi and store the value 22/7 in it. Check the data type of this variable.
+pi = 22 / 7
+print(type(pi))  # This will output: <class 'float'>
+Create a variable called for and assign it a value 4. See what happens and find out the reason behind the behavior that you see.
+for = 4
+Store the principal amount, rate of interest, and time in different variables and then calculate the Simple Interest for 3 years.
+P = 1000  # Principal amount
+R = 5  # Rate of interest in percentage
+T = 3  # Time in years
+
+Simple_Interest = (P * R * T) / 100
+print(Simple_Interest) 
